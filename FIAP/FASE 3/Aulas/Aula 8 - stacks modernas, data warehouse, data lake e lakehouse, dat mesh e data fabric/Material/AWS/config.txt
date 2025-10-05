@@ -1,0 +1,4 @@
+[default]
+awsaccountid = 	146211615918
+region = us-east-1
+output = json
