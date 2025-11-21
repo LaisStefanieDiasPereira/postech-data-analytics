@@ -123,9 +123,9 @@ def pipeline_teste(df):
 
     pipeline = Pipeline([
         ('feature_dropper', DropFeatures()),
-        ('OneHotEncoding', OneHotEncodingNames()),
+        ('OneHotEncoding', OneHotEncodingNames()), # atribui valores para string
         ('ordinal_feature', OrdinalFeature()),
-        ('min_max_scaler', MinMaxWithFeatNames()),
+        ('min_max_scaler', MinMaxWithFeatNames()), # normalizar os valores dos dados númericos
     ])
     df_pipeline = pipeline.fit_transform(df)
     return df_pipeline
